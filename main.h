@@ -12,6 +12,5 @@
 void display_prompt();
 char *read_command();
 void execute_command(char *command);
-extern char **environ;
 
 #endif
