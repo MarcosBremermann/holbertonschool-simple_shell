@@ -4,7 +4,7 @@
  */
 void display_prompt(void)
 {
-	dprintf(1, "$ ");
+	fprintf(stdout, "$ ");
 }
 
 #define MAX_ARGUMENTS 64
