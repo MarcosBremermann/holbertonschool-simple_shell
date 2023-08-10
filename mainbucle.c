@@ -2,7 +2,7 @@
 int
 main(void)
 {
-	char *line = NULL;
+	char *line;
 	char *command;
 
 	while (1)
@@ -36,15 +36,15 @@ main(void)
 			}
 			else if (strcmp(command, "ls") == 0)
 			{
-				char command_path[] = "/bin/ls";
+			char command_path[] = "/bin/ls";
 
-				execute_command(command_path);
+			execute_command(command_path);
 			}
-		}
 			else
 			{
 			execute_command(command);
 			}
+		}
 		free(line);
 	}
 	return (0);
