@@ -5,6 +5,7 @@
 void display_prompt(void)
 {
 	fprintf(stdout, "$ ");
+	fflush(stdout);
 }
 
 #define MAX_ARGUMENTS 64
@@ -19,8 +20,8 @@ char *read_command()
 	char *line = NULL;
 	size_t bufsize = 0;
 	ssize_t characters_read;
-	characters_read = getline(&line, &bufsize, stdin);
 
+	characters_read = getline(&line, &bufsize, stdin);
 	if (characters_read == -1)
 	{
 		free(line);
@@ -31,22 +32,49 @@ char *read_command()
 	return (line);
 }
 /**
+*parse_arguments - pasa argumento
+*@line: linea pasada
+*Return: argumento pasado
+*/
+char **pased_arguments(char *line)
+{
+	char **arguments = malloc(MAX_ARGUMENTS * sizeof(char *));
+	char *token = strtok(line, " ");
+	int arg_index = 0;
+
+	if (!arguments)
+	{
+		perror("error memory allocation");
+		exit(EXIT_FAILURE);
+	}
+	while (token != NULL)
+	{
+		arguments[arg_index] = token;
+		arg_index++;
+
+		if (arg_index >= MAX_ARGUMENTS - 1)
+		{
+			fprintf(stderr, "too many arguments\n");
+			break;
+		}
+
+		token = strtok(NULL, " ");
+	}
+	arguments[arg_index] = NULL;
+	return (arguments);
+}
+/**
  *execute_command - execute command write for the user
  *@command: char
+ *@arguments: char
  */
-void execute_command(char *command)
+void execute_command(char *command, char **arguments)
 {
-	pid_t pid;
+	pid_t pid = fork();
 
-	if ((pid = fork()) == 0)
+	if (pid == 0)
 	{
-		char *envp[] = {NULL};
-		char *args[2];
-
-		args[0] = command;
-		args[1] = NULL;
-
-		if (execve(command, args, envp) == -1)
+		if (execvp(command, arguments) == -1)
 		{
 			perror("Error");
 			exit(EXIT_FAILURE);
@@ -54,11 +82,10 @@ void execute_command(char *command)
 	}
 	else if (pid < 0)
 	{
-	perror("Error");
+		perror("Error");
 	}
 	else
 	{
-	waitpid(pid, NULL, 0);
+		waitpid(pid, NULL, 0);
 	}
 }
-
