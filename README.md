@@ -1,30 +1,17 @@
-# **Background Context:**
-Write a simple UNIX command interpreter.
+# **C Simple Shell Project**
+This is a simple UNIX command interpreter based off bash and sh. The shell allows users to interact with the operating system by entering commands.
 
-**Resources:**
-Unix shell
-Thompson shell
-Ken Thompson
-Everything you need to know to start coding your own shell concept page
+## Resources:
+- Unix shell
+- Thompson shell
+- Ken Thompson
+- "Everything you need to know to start coding your own shell" concept page
 
-**man or help:**
+## man or help:
 sh (Run sh as well)
 
-**List of functions and system calls used:**
-strcspn
-strcmp
-execve (man 2 execve)
-exit (man 3 exit)
-fork (man 2 fork)
-free (man 3 free)
-getline (man 3 getline)
-perror (man 3 perror)
-printf (man 3 printf)
-fprintf (man 3 fprintf)
-strtok (man 3 strtok)
-waitpid (man 2 waitpid)
 
-**libraries used:**
+## Libraries used:
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -32,10 +19,20 @@ waitpid (man 2 waitpid)
 #include <sys/wait.h>
 #include <sys/types.h>
 
-**Compilation:**
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+## Code Organization
 
-**Output:**
+1. `main.h`: Header file containing function declarations and necessary includes.
+2. `shellfuncional.c`: Contains functions for displaying the prompt, reading commands, and executing them.
+3. `mainbucle.c`: Implements the main loop of the shell, parsing user input, and executing commands.
+
+
+## Installation:
+To use this shell, follow this steps:
+1. Copy/Download all the files in this github repository into your own personal directory.
+2. Compile them all using the following compiler: `gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
+3. Run the shell using "./hsh" and now you're ready to go!
+
+## Output:
 Unless specified otherwise, your program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
 The only difference is when you print an error, the name of the program must be equivalent to your argv[0] (See below)
 
@@ -55,7 +52,7 @@ $ echo "qwerty" | ./././hsh
 ./././hsh: 1: qwerty: not found
 $
 
-**Testing:**
+## Testing:
 
 *Your shell should work like this in interactive mode:*
 
@@ -79,4 +76,3 @@ $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 $
-
