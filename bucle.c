@@ -38,10 +38,6 @@ main(void)
 
 				execute_command(command_path, arguments);
 			}
-			else if (strcmp(command, "env") == 0)
-			{
-				print_environment();
-			}
 			else
 			{
 				execute_command(command, arguments);
