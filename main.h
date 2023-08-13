@@ -15,10 +15,5 @@ char *read_command();
 char **pased_arguments(char *line);
 void execute_command(char *command, char **arguments);
 void print_environment();
-<<<<<<< HEAD
-=======
-char *find_executable_path(const char *command, const char *path);
-char *recreated_getenv(const char *name);
->>>>>>> b3bc7b77115c278ed5a290a510c70b84730b1d5e
 
 #endif
