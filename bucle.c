@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 int
 main(void)
 {
@@ -36,10 +37,6 @@ main(void)
 				char command_path[] = "/bin/ls";
 
 				execute_command(command_path, arguments);
-			}
-			else if (strcmp(command, "env") == 0)
-			{
-				print_environment();
 			}
 			else
 			{

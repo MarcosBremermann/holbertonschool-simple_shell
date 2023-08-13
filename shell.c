@@ -48,7 +48,7 @@ char **pased_arguments(char *line)
 	}
 	while (token != NULL)
 	{
-		arguments[arg_index] = strdup(token);
+		arguments[arg_index] = token;
 		arg_index++;
 
 		if (arg_index >= MAX_ARGUMENTS - 1)
@@ -61,4 +61,30 @@ char **pased_arguments(char *line)
 	}
 	arguments[arg_index] = NULL;
 	return (arguments);
+}
+/**
+ *execute_command - execute command write for the user
+ *@command: char
+ *@arguments: char
+ */
+void execute_command(char *command, char **arguments)
+{
+	pid_t pid = fork();
+
+	if (pid == 0)
+	{
+		if (execvp(command, arguments) == -1)
+		{
+			perror("Error");
+			exit(EXIT_FAILURE);
+		}
+	}
+	else if (pid < 0)
+	{
+		perror("Error");
+	}
+	else
+	{
+		waitpid(pid, NULL, 0);
+	}
 }
