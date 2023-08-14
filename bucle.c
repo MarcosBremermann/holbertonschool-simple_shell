@@ -18,7 +18,7 @@ main(void)
 			break;
 		}
 		line_copy = strdup(line);
-		command = strtok(line_copy, " ");
+		command = strtok(line_copy, " \t");
 
 		if (command != NULL)
 		{
