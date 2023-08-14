@@ -75,8 +75,8 @@ void execute_command(char *command, char **arguments)
 	{
 		if (execvp(command, arguments) == -1)
 		{
-			perror("Error");
-			exit(EXIT_FAILURE);
+		perror("Error");
+		exit(EXIT_FAILURE);
 		}
 	}
 	else if (pid < 0)
@@ -88,3 +88,4 @@ void execute_command(char *command, char **arguments)
 		waitpid(pid, NULL, 0);
 	}
 }
+
