@@ -1,13 +1,12 @@
 #include "main.h"
 /**
 *pased_arguments - pasa argumento
-*@line: linea pasada
 *Return: argumento pasado
 */
 char **pased_arguments(char *line)
 {
 	char **arguments = malloc(MAX_ARGUMENTS * sizeof(char *));
-	char *token = strtok(line, " ");
+	char *token = strtok(line, " \t");
 	int arg_index = 0;
 
 	if (!arguments)
@@ -26,7 +25,7 @@ char **pased_arguments(char *line)
 			break;
 		}
 
-		token = strtok(NULL, " ");
+		token = strtok(NULL, " \t");
 	}
 	arguments[arg_index] = NULL;
 	return (arguments);
