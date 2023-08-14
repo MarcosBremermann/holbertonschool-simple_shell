@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 int
 main(void)
 {
@@ -38,9 +37,13 @@ main(void)
 
 				execute_command(command_path, arguments);
 			}
+			else if (strcmp(command, "env") == 0)
+			{
+				print_environment();
+			}
 			else
 			{
-				execute_command(command, arguments);
+    			execute_command(command, arguments);
 			}
 			free(arguments);
 		}
