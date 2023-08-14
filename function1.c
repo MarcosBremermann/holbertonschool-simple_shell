@@ -19,9 +19,8 @@ char *read_command()
 {
 	char *line = NULL;
 	size_t bufsize = 0;
-	ssize_t characters_read;
+	ssize_t characters_read = getline(&line, &bufsize, stdin);
 
-	characters_read = getline(&line, &bufsize, stdin);
 	if (characters_read == -1)
 	{
 		free(line);

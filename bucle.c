@@ -5,11 +5,10 @@ main(void)
 	char *line = NULL;
 	char *command = NULL;
 	char **arguments = NULL;
+	char *line_copy = NULL;
 
 	while (1)
 	{
-		char *line_copy = NULL;
-
 		display_prompt();
 		line = read_command();
 
@@ -43,7 +42,7 @@ main(void)
 			}
 			else
 			{
-    			execute_command(command, arguments);
+				execute_command(command, arguments);
 			}
 			free(arguments);
 		}

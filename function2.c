@@ -1,6 +1,7 @@
 #include "main.h"
 /**
 *pased_arguments - pasa argumento
+*@line: char
 *Return: argumento pasado
 */
 char **pased_arguments(char *line)
@@ -37,7 +38,6 @@ char **pased_arguments(char *line)
 */
 char *recreated_getenv(const char *name)
 {
-	extern char **environ;
 	int i;
 
 	for (i = 0; environ[i] != NULL; ++i)
