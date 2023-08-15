@@ -9,10 +9,17 @@ char **pased_arguments(char *line)
 	char **arguments = malloc(MAX_ARGUMENTS * sizeof(char *));
 	char *token = strtok(line, " \t");
 	int arg_index = 0;
+	int i;
 
 	if (!arguments)
 	{
 		perror("error memory allocation");
+
+		for (i = 0; i < arg_index; i++)
+		{
+			free(arguments[i]);
+		}
+		free(arguments);
 		exit(EXIT_FAILURE);
 	}
 	while (token != NULL)
@@ -23,6 +30,12 @@ char **pased_arguments(char *line)
 		if (arg_index >= MAX_ARGUMENTS - 1)
 		{
 			fprintf(stderr, "too many arguments\n");
+
+			for (i = 0; i < arg_index; i++)
+			{
+				free(arguments[i]);
+			}
+			free(arguments);
 			break;
 		}
 

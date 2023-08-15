@@ -25,8 +25,8 @@ main(void)
 
 			if (strcmp(command, "exit") == 0)
 			{
-				free(line);
 				free(arguments);
+				free(line);
 				free(line_copy);
 				break;
 			}
@@ -46,8 +46,8 @@ main(void)
 			}
 			free(arguments);
 		}
-		free(line_copy);
 		free(line);
+		free(line_copy);
 	}
 	return (0);
 }
