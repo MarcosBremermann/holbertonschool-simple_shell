@@ -72,3 +72,16 @@ void execute_command(char *command, char **arguments)
 		waitpid(pid, NULL, 0);
 	}
 }
+
+/**
+*print_environment - print environment
+*/
+void print_environment(void)
+{
+	char **env_ptr;
+
+	for (env_ptr = environ; *env_ptr != NULL; env_ptr++)
+	{
+		printf("%s\n", *env_ptr);
+	}
+}
