@@ -2,6 +2,7 @@
 int
 main(void)
 {
+	int i = 0;
 	char *line = NULL;
 	char *command = NULL;
 	char **arguments = NULL;
@@ -23,6 +24,7 @@ main(void)
 		{
 			arguments = pased_arguments(line);
 
+
 			if (strcmp(command, "exit") == 0)
 			{
 				free(arguments);
@@ -34,7 +36,7 @@ main(void)
 			{
 				char command_path[] = "/bin/ls";
 
-				execute_command(command_path, arguments);
+				execute_command(command_path, arguments, &line);
 			}
 			else if (strcmp(command, "env") == 0)
 			{
@@ -42,7 +44,8 @@ main(void)
 			}
 			else
 			{
-				execute_command(command, arguments);
+				printf("aqui\n");
+				execute_command(command, arguments, &line);
 			}
 			free(arguments);
 		}

@@ -9,11 +9,12 @@
 #include <string.h>
 #include <sys/wait.h>
 #include <sys/types.h>
+#include <sys/stat.h>
 
 void display_prompt(void);
 char *read_command();
 char **pased_arguments(char *line);
-void execute_command(char *command, char **arguments);
+void execute_command(char *command, char **arguments, char **line);
 void print_environment(void);
 char *find_executable_path(const char *command, const char *path);
 char *recreated_getenv(const char *name);

@@ -31,10 +31,11 @@ char *find_executable_path(const char *command, const char *path)
  *@command: char
  *@arguments: char
  */
-void execute_command(char *command, char **arguments)
+void execute_command(char *command, char **arguments, char **line)
 {
 	pid_t pid = fork();
 	char **custom_environ = NULL;
+	int i = 0;
 
 	if (pid == 0)
 	{
@@ -59,8 +60,13 @@ void execute_command(char *command, char **arguments)
 			else
 			{
 				perror("Command not found");
-				exit(EXIT_FAILURE);
-			}
+				while (arguments[i])
+				{
+					free(arguments[i]);
+					i++;
+				}
+				free(arguments);
+			}			
 		}
 	}
 	else if (pid < 0)
