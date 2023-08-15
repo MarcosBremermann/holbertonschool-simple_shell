@@ -20,7 +20,6 @@ char *find_executable_path(const char *command, const char *path)
 			free(path_copy);
 			return (strdup(command_path));
 		}
-
 		token = strtok(NULL, ":");
 	}
 	free(path_copy);
@@ -30,12 +29,14 @@ char *find_executable_path(const char *command, const char *path)
  *execute_command - execute command write for the user
  *@command: char
  *@arguments: char
+ *@line: char
  */
 void execute_command(char *command, char **arguments, char **line)
 {
 	pid_t pid = fork();
 	char **custom_environ = NULL;
-	int i = 0;
+
+	line = line;
 
 	if (pid == 0)
 	{
@@ -60,14 +61,9 @@ void execute_command(char *command, char **arguments, char **line)
 			else
 			{
 				perror("Command not found");
-				while (arguments[i])
-				{
-					free(arguments[i]);
-					i++;
-				}
-				free(arguments);
-			}			
+			}
 		}
+
 	}
 	else if (pid < 0)
 	{
@@ -78,7 +74,6 @@ void execute_command(char *command, char **arguments, char **line)
 		waitpid(pid, NULL, 0);
 	}
 }
-
 /**
 *print_environment - print environment
 */

@@ -24,7 +24,7 @@ char **pased_arguments(char *line)
 	}
 	while (token != NULL)
 	{
-		arguments[arg_index] = token;
+		arguments[arg_index] = strdup(token);
 		arg_index++;
 
 		if (arg_index >= MAX_ARGUMENTS - 1)
@@ -38,7 +38,6 @@ char **pased_arguments(char *line)
 			free(arguments);
 			break;
 		}
-
 		token = strtok(NULL, " \t");
 	}
 	arguments[arg_index] = NULL;

@@ -24,9 +24,13 @@ main(void)
 		{
 			arguments = pased_arguments(line);
 
-
 			if (strcmp(command, "exit") == 0)
 			{
+				while (arguments[i])
+				{
+					free(arguments[i]);
+					i++;
+				}
 				free(arguments);
 				free(line);
 				free(line_copy);
@@ -44,8 +48,12 @@ main(void)
 			}
 			else
 			{
-				printf("aqui\n");
-				execute_command(command, arguments, &line);
+			execute_command(command, arguments, &line);
+			}
+			while (arguments[i])
+			{
+				free(arguments[i]);
+					i++;
 			}
 			free(arguments);
 		}
