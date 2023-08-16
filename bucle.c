@@ -7,10 +7,14 @@ main(void)
 	char *command = NULL;
 	char **arguments = NULL;
 	char *line_copy = NULL;
+	int interactive = isatty(STDIN_FILENO);
 
 	while (1)
 	{
-		display_prompt();
+		if (interactive)
+		{
+			display_prompt();
+		}
 		line = read_command();
 
 		if (line == NULL)
