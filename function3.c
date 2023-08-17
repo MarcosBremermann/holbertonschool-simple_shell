@@ -39,11 +39,6 @@ void execute_command(char *command, char **arguments, char **line)
 	line = line;
 	if (pid == 0)
 	{
-		if (access(command, X_OK) != 0)
-		{
-			fprintf(stderr, "./hsh: 1: %s: no encontrado\n", command);
-			exit(EXIT_FAILURE);
-		}
 		if (strchr(command, '/') != NULL)
 		{
 			if (execve(command, arguments, custom_environ) == -1)
@@ -70,9 +65,13 @@ void execute_command(char *command, char **arguments, char **line)
 		}
 	}
 	else if (pid < 0)
+	{
 		perror("Error");
+	}
 	else
+	{
 		waitpid(pid, NULL, 0);
+	}
 }
 /**
 *print_environment - function that prints the environment
