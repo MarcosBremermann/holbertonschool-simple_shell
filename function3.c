@@ -35,10 +35,9 @@ void execute_command(char *command, char **arguments, char **line)
 {
 	pid_t pid = fork();
 	char **custom_environ = NULL;
-	int status;
-	int	exit_status = WEXITSTATUS(status);
 
 	line = line;
+
 	if (pid == 0)
 	{
 		if (strchr(command, '/') != NULL)
@@ -67,18 +66,12 @@ void execute_command(char *command, char **arguments, char **line)
 		}
 	}
 	else if (pid < 0)
+	{
 		perror("Error");
+	}
 	else
 	{
 		waitpid(pid, NULL, 0);
-		if (WIFEXITED(status))
-		{
-			if (exit_status != 0)
-			{
-				fprintf(stderr, "Command exited with status %d\n", exit_status);
-				exit(exit_status);
-			}
-		}
 	}
 }
 /**
