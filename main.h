@@ -8,8 +8,6 @@
 #include <unistd.h>
 #include <string.h>
 #include <sys/wait.h>
-#include <sys/types.h>
-#include <sys/stat.h>
 
 void display_prompt(void);
 char *read_command();
