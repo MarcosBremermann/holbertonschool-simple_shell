@@ -30,9 +30,9 @@ This is a simple UNIX command interpreter based off bash and sh. The shell allow
 - <a href="https://man7.org/linux/man-pages/man3/free.3.html" target="_blank">free</a>
 - <a href="https://man7.org/linux/man-pages/man3/getline.3.html" target="_blank">getline</a>
 - <a href="https://man7.org/linux/man-pages/man3/exit.3.html" target="_blank">exit</a>
-- <a href="https://man7.org/linux/man-pages/man3/access.3p.html" target="_blank">access</a>
+- <a href="https://man7.org/linux/man-pages/man2/access.2.html" target="_blank">access</a>
 - <a href="https://man7.org/linux/man-pages/man3/fork.3p.html" target="_blank">fork</a>
-- <a href="https://man7.org/linux/man-pages/man3/excev.3p.html" target="_blank">excev</a>
+- <a href="https://man7.org/linux/man-pages/man2/execve.2.html" target="_blank">execve</a>
 - <a href="https://man7.org/linux/man-pages/man3/isatty.3.html" target="_blank">isatty</a>
 - <a href="https://man7.org/linux/man-pages/man3/strlen.3.html" target="_blank">strlen</a>
 - <a href="https://man7.org/linux/man-pages/man3/strtok.3.html" target="_blank">strtok</a>
