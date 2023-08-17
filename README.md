@@ -1,7 +1,7 @@
 # **C Simple Shell Project**
 <div align="center">
   <a href="https://holbertonschool.uy">
-    <img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" align="center" height="250" width="650" />
+    <img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" align="center" height="250" width="800" />
   </a>
 </div>
 
