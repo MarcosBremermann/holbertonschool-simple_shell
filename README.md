@@ -1,7 +1,7 @@
 # **C Simple Shell Project**
 <div align="center">
   <a href="https://holbertonschool.uy">
-    <img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" align="center" height="250" width="600" />
+    <img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" align="center" height="250" width="650" />
   </a>
 </div>
 
@@ -119,5 +119,11 @@ hsh main.c shell.c test_ls_2
 $
 
 ## Contact & help
+For any bugs or doubts you can contact both creators through our contacts:
+- Iamara Barrios
+    - Gmail: 6753@holbertonstudents.com
+    - <a href="https://www.linkedin.com/in/iamara-barrios-6216b026a/">Linkedin Profile</a>
 
-
+- Marcos Bremermann
+    - Gmail: 6746@holbertonstudents.com
+    - <a href="https://www.linkedin.com/in/marcos-bremermann-71839423a/">Linkedin Profile</a>
