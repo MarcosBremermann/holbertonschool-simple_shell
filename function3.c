@@ -64,7 +64,6 @@ void execute_command(char *command, char **arguments, char **line)
 				exit(EXIT_FAILURE);
 			}
 		}
-
 	}
 	else if (pid < 0)
 	{
