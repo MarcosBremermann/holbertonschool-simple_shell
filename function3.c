@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 *find_executable_path - function that finds the path of an executable command
-*@command: name of the command 
+*@command: name of the command
 *@path: a colon-separated list of paths to search from
 *Return: command_path or null
 */
