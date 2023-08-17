@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-*find_executable_path - path
-*@command: char
-*@path: char
+*find_executable_path - function that finds the path of an executable command
+*@command: name of the command 
+*@path: a colon-separated list of paths to search from
 *Return: command_path or null
 */
 char *find_executable_path(const char *command, const char *path)
@@ -26,10 +26,10 @@ char *find_executable_path(const char *command, const char *path)
 	return (NULL);
 }
 /**
- *execute_command - execute command write for the user
- *@command: char
- *@arguments: char
- *@line: char
+ *execute_command - function that executes a command with arguments
+ *@command: command to be executed
+ *@arguments: array of arguments for the command
+ *@line: pointer to the original line of command
  */
 void execute_command(char *command, char **arguments, char **line)
 {
@@ -75,7 +75,7 @@ void execute_command(char *command, char **arguments, char **line)
 	}
 }
 /**
-*print_environment - print environment
+*print_environment - function that prints the environment
 */
 void print_environment(void)
 {

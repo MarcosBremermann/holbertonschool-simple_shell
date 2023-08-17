@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-*pased_arguments - pasa argumento
-*@line: char
-*Return: argumento pasado
+*pased_arguments - function that passes arguments
+*@line: pointer that takes a string containing text and tokenize it
+*Return: arguments
 */
 char **pased_arguments(char *line)
 {
@@ -44,8 +44,8 @@ char **pased_arguments(char *line)
 	return (arguments);
 }
 /**
-*recreated_getenv - recreated
-*@name: char
+*recreated_getenv - function that recreates the use of the command "getenv"
+*@name: name of the environ
 *Return: NULL or environ
 */
 char *recreated_getenv(const char *name)
