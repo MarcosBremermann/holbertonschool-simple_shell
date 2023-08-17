@@ -1,6 +1,8 @@
 # **C Simple Shell Project**
 <div align="center">
-<img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" align="center" height="250" width="250" />
+  <a href="https://holbertonschool.uy">
+    <img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" align="center" height="250" width="600" />
+  </a>
 </div>
 
 This is a simple UNIX command interpreter based off bash and sh. The shell allows users to interact with the operating system by entering commands.
