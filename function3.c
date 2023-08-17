@@ -61,6 +61,7 @@ void execute_command(char *command, char **arguments, char **line)
 			else
 			{
 				perror("Command not found");
+				exit(EXIT_FAILURE);
 			}
 		}
 
