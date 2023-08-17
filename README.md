@@ -20,6 +20,29 @@ This is a simple UNIX command interpreter based off bash and sh. The shell allow
 - #include <string.h>
 - #include <sys/wait.h>
 
+## Commands used
+- <a href="https://man7.org/linux/man-pages/man3/printf.3.html" target="_blank">printf</a>
+- <a href="https://man7.org/linux/man-pages/man3/fprintf.3p.html" target="_blank">fprintf</a>
+- <a href="https://man7.org/linux/man-pages/man3/sprintf.3p.html" target="_blank">sprintf</a>
+- <a href="https://man7.org/linux/man-pages/man3/perror.3.html" target="_blank">perror</a>
+- <a href="https://man7.org/linux/man-pages/man3/fflush.3.html" target="_blank">fflush</a>
+- <a href="https://man7.org/linux/man-pages/man3/malloc.3p.html" target="_blank">malloc</a>
+- <a href="https://man7.org/linux/man-pages/man3/free.3.html" target="_blank">free</a>
+- <a href="https://man7.org/linux/man-pages/man3/getline.3.html" target="_blank">getline</a>
+- <a href="https://man7.org/linux/man-pages/man3/exit.3.html" target="_blank">exit</a>
+- <a href="https://man7.org/linux/man-pages/man3/access.3.html" target="_blank">access</a>
+- <a href="https://man7.org/linux/man-pages/man3/fork.3.html" target="_blank">fork</a>
+- <a href="https://man7.org/linux/man-pages/man3/excev.3.html" target="_blank">excev</a>
+- <a href="https://man7.org/linux/man-pages/man3/isatty.3.html" target="_blank">isatty</a>
+- <a href="https://man7.org/linux/man-pages/man3/strlen.3.html" target="_blank">strlen</a>
+- <a href="https://man7.org/linux/man-pages/man3/strtok.3.html" target="_blank">strtok</a>
+- <a href="https://man7.org/linux/man-pages/man3/strdup.3.html" target="_blank">strdup</a>
+- <a href="https://man7.org/linux/man-pages/man3/strchr.3.html" target="_blank">strchr</a>
+- <a href="https://man7.org/linux/man-pages/man3/strcmp.3.html" target="_blank">strcmp</a>
+- <a href="https://man7.org/linux/man-pages/man3/strncmp.3.html" target="_blank">strncmp</a>
+- <a href="https://man7.org/linux/man-pages/man3/strcspn.3.html" target="_blank">strcspn</a>
+- <a href="https://man7.org/linux/man-pages/man3/waitpid.3.html" target="_blank">waitpid</a>
+
 ## Code Organization
 
 1. `main.h`: Header file containing function declarations and necessary includes.
