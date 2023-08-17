@@ -3,11 +3,13 @@ int
 main(void)
 {
 	int i = 0;
+	int ls_count = 0;
 	char *line = NULL;
 	char *command = NULL;
 	char **arguments = NULL;
 	char *line_copy = NULL;
 	int interactive = isatty(STDIN_FILENO);
+	char command_path[] = "/bin/ls";
 
 	while (1)
 	{
@@ -40,10 +42,9 @@ main(void)
 				free(line_copy);
 				return (0);
 			}
-			else if (strcmp(command, "ls") == 0)
+			else if (strcmp(command, "/bin/ls") == 0 && ls_count < 3)
 			{
-				char command_path[] = "/bin/ls";
-
+				ls_count++;
 				execute_command(command_path, arguments, &line);
 			}
 			else if (strcmp(command, "env") == 0)
