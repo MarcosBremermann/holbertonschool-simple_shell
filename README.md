@@ -121,9 +121,9 @@ $
 ## Contact & help
 For any bugs or doubts you can contact both creators through our contacts:
 - Iamara Barrios
-    - Gmail: 6753@holbertonstudents.com
+    - Gmail: iamarabarrios457@gmail.com
     - <a href="https://www.linkedin.com/in/iamara-barrios-6216b026a/">Linkedin Profile</a>
 
 - Marcos Bremermann
-    - Gmail: 6746@holbertonstudents.com
+    - Gmail: mabm2004@gmail.com
     - <a href="https://www.linkedin.com/in/marcos-bremermann-71839423a/">Linkedin Profile</a>
