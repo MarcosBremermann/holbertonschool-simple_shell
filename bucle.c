@@ -38,7 +38,7 @@ main(void)
 				free(arguments);
 				free(line);
 				free(line_copy);
-				break;
+				return (0);
 			}
 			else if (strcmp(command, "ls") == 0)
 			{
