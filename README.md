@@ -1,4 +1,8 @@
 # **C Simple Shell Project**
+<div align="center">
+<img src="https://ml.globenewswire.com/Resource/Download/a08e6c28-55be-44c8-8461-03544f094b38" align="center" height="250" width="250" />
+</div>
+
 This is a simple UNIX command interpreter based off bash and sh. The shell allows users to interact with the operating system by entering commands.
 
 ## Resources:
@@ -7,18 +11,12 @@ This is a simple UNIX command interpreter based off bash and sh. The shell allow
 - Ken Thompson
 - "Everything you need to know to start coding your own shell" concept page
 
-## man or help:
-sh (Run sh as well)
-
-
 ## Libraries used:
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <sys/wait.h>
-#include <sys/types.h>
-#include <sys/stat.h>
+- #include <stdio.h>
+- #include <stdlib.h>
+- #include <unistd.h>
+- #include <string.h>
+- #include <sys/wait.h>
 
 ## Code Organization
 
@@ -28,7 +26,7 @@ sh (Run sh as well)
 4. `function3.c`: This file contains the find_executable_path, execute_command and print_environment functions.
 5. `mainbucle.c`: Implements the main loop of the shell, parsing user input, and executing commands.
 
-**What does each function:**
+## What's the purpose of each function:
 
 *display_prompt* - This function displays the prompt symbol ("$") on standard output, indicating that the program is ready to receive user commands.
 
@@ -36,7 +34,7 @@ sh (Run sh as well)
 
 *passed_arguments* - This function takes the command line entered by the user and splits it into individual arguments.
 
-*recreated_getenv* - This function searches the environment for the value associated with a specific variable whose name is passed as an argument and if found it returns the value of the variable and if not found it returns NULL.
+*recreated_getenv* - This function searches the environment for the value associated with a specific variable whose name is passed as an argument, and if found, it returns the value of the variable. If it isn't found it returns NULL.
 
 *find_executable_path* - This function looks up the full path of the executable of the given command in a PATH environment variable. If it finds the executable, it returns its full path; otherwise, it returns NULL.
 
@@ -94,3 +92,7 @@ $ cat test_ls_2 | ./hsh
 hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 $
+
+## Contact & help
+
+
