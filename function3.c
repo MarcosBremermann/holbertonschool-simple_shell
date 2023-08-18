@@ -34,7 +34,6 @@ char *find_executable_path(const char *command, const char *path)
 void execute_command(char *command, char **arguments, char **line)
 {
 	pid_t pid = fork();
-	char **custom_environ = 0;
 
 	line = line;
 
@@ -42,7 +41,7 @@ void execute_command(char *command, char **arguments, char **line)
 	{
 		if (strchr(command, '/') != NULL)
 		{
-			if (execve(command, arguments, custom_environ) == -1)
+			if (execve(command, arguments, environ) == -1)
 			{
 				perror("Error");
 				exit(EXIT_FAILURE);
@@ -55,7 +54,7 @@ void execute_command(char *command, char **arguments, char **line)
 
 			if (command_path != NULL)
 			{
-				execve(command_path, arguments, custom_environ);
+				execve(command_path, arguments, environ);
 				free(command_path);
 			}
 			else
