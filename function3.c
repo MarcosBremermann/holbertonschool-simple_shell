@@ -34,7 +34,7 @@ char *find_executable_path(const char *command, const char *path)
 void execute_command(char *command, char **arguments, char **line)
 {
 	pid_t pid = fork();
-	char **custom_environ = NULL;
+	char **custom_environ = 0;
 
 	line = line;
 
