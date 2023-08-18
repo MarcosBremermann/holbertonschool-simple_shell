@@ -44,7 +44,7 @@ void execute_command(char *command, char **arguments, char **line)
 			if (execve(command, arguments, custom_environ) == -1)
 			{
 				perror("Error");
-				exit(2);
+				exit(EXIT_FAILURE);
 			}
 		}
 		else
@@ -60,7 +60,7 @@ void execute_command(char *command, char **arguments, char **line)
 			else
 			{
 				perror("Command not found");
-				exit(2);
+				exit(EXIT_FAILURE);
 			}
 		}
 	}

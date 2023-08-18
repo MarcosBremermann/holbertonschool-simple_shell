@@ -3,7 +3,6 @@ int
 main(void)
 {
 	int i = 0;
-	int ls_count = 0;
 	char *line = NULL;
 	char *command = NULL;
 	char **arguments = NULL;
@@ -42,9 +41,8 @@ main(void)
 				free(line_copy);
 				return (0);
 			}
-			else if (strcmp(command, "/bin/ls") == 0 && ls_count < 3)
+			else if (strcmp(command, "/bin/ls"))
 			{
-				ls_count++;
 				execute_command(command_path, arguments, &line);
 			}
 			else if (strcmp(command, "env") == 0)
