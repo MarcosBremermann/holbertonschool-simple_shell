@@ -22,7 +22,7 @@ main(void)
 			break;
 		}
 		line_copy = strdup(line);
-		command = strtok(line_copy, " \t");
+		command = strtok(line_copy, " \t\n");
 
 		if (command != NULL)
 		{

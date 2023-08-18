@@ -7,7 +7,7 @@
 char **pased_arguments(char *line)
 {
 	char **arguments = malloc(MAX_ARGUMENTS * sizeof(char *));
-	char *token = strtok(line, " \t");
+	char *token = strtok(line, " \t\n");
 	int arg_index = 0;
 	int i;
 
@@ -38,7 +38,7 @@ char **pased_arguments(char *line)
 			free(arguments);
 			break;
 		}
-		token = strtok(NULL, " \t");
+		token = strtok(NULL, " \t\n");
 	}
 	arguments[arg_index] = NULL;
 	return (arguments);
