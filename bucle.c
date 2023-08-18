@@ -8,7 +8,6 @@ main(void)
 	char **arguments = NULL;
 	char *line_copy = NULL;
 	int interactive = isatty(STDIN_FILENO);
-	char command_path[] = "/bin/ls";
 
 	while (1)
 	{
@@ -39,10 +38,12 @@ main(void)
 				free(arguments);
 				free(line);
 				free(line_copy);
-				return (0);
+				return(0);
 			}
-			else if (strcmp(command, "/bin/ls"))
+			else if (strcmp(command, "ls") == 0)
 			{
+				char command_path[] = "/bin/ls";
+
 				execute_command(command_path, arguments, &line);
 			}
 			else if (strcmp(command, "env") == 0)

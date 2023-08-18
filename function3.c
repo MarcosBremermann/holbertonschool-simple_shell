@@ -37,6 +37,7 @@ void execute_command(char *command, char **arguments, char **line)
 	char **custom_environ = NULL;
 
 	line = line;
+
 	if (pid == 0)
 	{
 		if (strchr(command, '/') != NULL)
