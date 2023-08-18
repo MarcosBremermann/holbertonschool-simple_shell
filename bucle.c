@@ -1,6 +1,9 @@
 #include "main.h"
-int
-main(void)
+/**
+ * main - loopi
+ * *Return: 0
+ */
+int main(void)
 {
 	int i = 0;
 	char *line = NULL;
@@ -38,7 +41,7 @@ main(void)
 				free(arguments);
 				free(line);
 				free(line_copy);
-				return(0);
+				return (0);
 			}
 			else if (strcmp(command, "ls") == 0)
 			{
