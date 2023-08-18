@@ -54,6 +54,7 @@ main(void)
 			{
 			execute_command(command, arguments, &line);
 			}
+			i = 0;
 			while (arguments[i])
 			{
 				free(arguments[i]);
