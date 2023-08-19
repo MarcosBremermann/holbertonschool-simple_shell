@@ -7,6 +7,18 @@
 
 This is a simple UNIX command interpreter based off bash and sh. The shell allows users to interact with the operating system by entering commands.
 
+## Index
+- Resources
+- Libraries used
+- Commands used
+- Code Organization
+- Function explanation
+- Installation
+- Output
+- Testing
+- Contact & help
+
+
 ## Resources:
 - Unix shell
 - Thompson shell
@@ -49,9 +61,9 @@ This is a simple UNIX command interpreter based off bash and sh. The shell allow
 2. `function1.c`: This file contains the display_prompt and read_command functions.
 3. `function2.c`: This file contains the functions passed_arguments and recreated_getenv
 4. `function3.c`: This file contains the find_executable_path, execute_command and print_environment functions.
-5. `mainbucle.c`: Implements the main loop of the shell, parsing user input, and executing commands.
+5. `bucle.c`: Implements the main loop of the shell, parsing user input, and executing commands.
 
-## What's the purpose of each function:
+## Function explanation
 
 *display_prompt* - This function displays the prompt symbol ("$") on standard output, indicating that the program is ready to receive user commands.
 
