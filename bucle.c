@@ -28,7 +28,13 @@ main(void)
 		{
 			arguments = pased_arguments(line);
 
-			if (strcmp(command, "exit") == 0)
+			if (strcmp(command, "ls") == 0 && recreated_getenv("PATH") == NULL)
+			{
+				char command_path[] = "/bin/ls";
+
+				execute_command(command_path, arguments, &line);
+			}
+			else if (strcmp(command, "exit") == 0)
 			{
 				while (arguments[i])
 				{
@@ -39,12 +45,6 @@ main(void)
 				free(line);
 				free(line_copy);
 				return (0);
-			}
-			else if (strcmp(command, "ls") == 0)
-			{
-				char command_path[] = "/bin/ls";
-
-				execute_command(command_path, arguments, &line);
 			}
 			else if (strcmp(command, "env") == 0)
 			{
