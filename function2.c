@@ -41,8 +41,6 @@ char **pased_arguments(char *line)
 		token = strtok(NULL, " \t\n");
 	}
 	arguments[arg_index] = NULL;
-	free(arguments[i]);
-	free(arguments);
 	return (arguments);
 }
 /**
